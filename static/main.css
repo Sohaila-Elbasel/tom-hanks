@@ -1,0 +1,39 @@
+.container-fluid{
+  padding: 25px;
+}
+.title{
+  padding: 1.5em;
+}
+.title h1{
+  font-family: 'Rowdies', cursive;
+  font-size: 3.5em;
+  color: #3b7076;
+}
+.intro .main-paragraph{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro img{
+    width: 300px;
+}
+.movies h3 a{
+  font-family: 'Rowdies', cursive;
+  font-size: 1.8em;
+  color: #3b7076;
+}
+.ok:hover,
+.ok:active{
+  text-decoration: none;
+  color: #4b8d94;
+}
+.movies .card-title{
+  color: #3b7076;
+  font-family: 'Rowdies', cursive;
+  font-size: 1.6em;
+}
+.movies .card-body a{
+  background-color: #4b8d94;
+  color: #fff;
+  font-weight: bold;
+}
