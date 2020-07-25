@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
+{% block nav %}
+  <li class="nav-item active">
+    <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('movies') }}">Movies</a>
+  </li>
+{% endblock nav %}
+
 {% block content %}
   <div >
     <div class="col-sm title">

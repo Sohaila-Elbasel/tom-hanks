@@ -18,7 +18,7 @@
 .intro img{
     width: 300px;
 }
-.movies h3 a{
+.movies h3 .movies-main, .movies-title{
   font-family: 'Rowdies', cursive;
   font-size: 1.8em;
   color: #3b7076;
@@ -37,4 +37,7 @@
   background-color: #4b8d94;
   color: #fff;
   font-weight: bold;
+}
+.card{
+  text-align: center;
 }
