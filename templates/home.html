@@ -3,9 +3,14 @@
 {% block content %}
   <div >
     <div class="col-sm title">
-      <h1 >Tom Hanks</h1>
+      <h3 class="border-bottom">Tom Hanks</h3>
     </div>
     <div class="row intro ">
+
+      <div class="col-sm-4 main-paragraph">
+        <img src="https://4.bp.blogspot.com/-rjjKVdTZOrA/UDz0GEkbNTI/AAAAAAAAEQI/LrdhYtWzczI/s1600/Forrest-Gump-Tom-Hanks.gif" alt="Tom hanks">
+      </div>
+
       <div class="col-sm-8 main-paragraph">
         <p>&nbsp; &nbsp; Thomas Jeffrey Hanks was born in Concord, California, to Janet Marylyn (Frager), a hospital worker, and Amos Mefford Hanks, an itinerant cook. His mother's family, originally surnamed "Fraga", was entirely Portuguese, while his father was of mostly English ancestry. Tom grew up in what he has called a "fractured" family. He moved around a great deal after his parents' divorce, living with a succession of step-families. No problems, no alcoholism - just a confused childhood. He has no acting experience in college and credits the fact that he could not get cast in a college play with actually starting his career. He went downtown, and auditioned for a community theater play, was invited by the director of that play to go to Cleveland, and there his acting career started.
 
@@ -15,23 +20,27 @@
 
         </p>
       </div>
-      <div class="col-sm-4 main-paragraph">
-        <img src="https://www.gannett-cdn.com/presto/2020/07/09/USAT/b850c175-4d38-49fe-9bf7-6950c37657ab-tom_hanks_67.JPG" alt="Tom hanks">
-      </div>
 
     </div>
   </div>
 
   <div class="mt-2 pt-5 movies">
-    <h3 class="border-bottom"><a class="ok" href="#">Movies</a></h3>
-    <div class="card " style="width: 18rem;">
-      <a href="#"><img src="#" class="card-img-top" alt="..."></a>
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">year:  - Rate: /10</p>
-        <a href="#" class="btn stretched-link">See more</a>
-      </div>
+    <h3 class="border-bottom"><a class="movies-main" href="#">Movies</a></h3>
+
+    <div class="row">
+      {% for row in data %}
+        <div class="card col-sm-3" style="width: 18rem;">
+          <a href="#"><img src="{{ row[1] }}" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title">{{ row[0] }}</h5>
+            <p class="card-text">year: {{ row[2] }}  - Rate: {{ row[4] }}/10</p>
+            <a href="#" class="btn stretched-link">See more</a>
+          </div>
+        </div>
+      {% endfor %}
     </div>
+
+
   </div>
 
 

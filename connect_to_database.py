@@ -5,8 +5,6 @@ def close_connection(cursor, connection):
     try:
         cursor.close()
         connection.close()
-        print('connection is closed')
-
     except:
         raise('Connection Can\'t be closed')
 
