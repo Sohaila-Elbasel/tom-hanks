@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+  <li class="nav-item ">
+    <a class="nav-link" href="{{ url_for('home') }}">Home </a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{{ url_for('movies') }}">Movies <span class="sr-only">(current)</span></a>
+  </li>
+{% endblock nav %}
+
+{% block content %}
+
+  <div class="mt-2 pt-5 movies">
+    <h3 class="border-bottom movies-title">Movie <img src="https://cdn4.iconfinder.com/data/icons/vector-brand-logos/40/Instagram-512.png" width="40" alt=""></h3>
+
+    <div class="row justify-content-center movie">
+      {% if data %}
+          <img src="{{ data[2] }}" class="card-img-top"  alt="{{ data[2] }}">
+          <div class="card-body movie">
+            <h5 class="card-title">{{ data[1] }}</h5>
+            <h6>genre: {{ data[4] }}</h6>
+            <p class="card-text">year: {{ data[3] }}</p>
+            <p class="card-text">Rate: {{ data[5] }}/10</p>
+            <p>{{ data[6] }}</p>
+          </div>
+
+      {% endif %}
+    </div>
+
+
+  </div>
+
+
+{% endblock content %}

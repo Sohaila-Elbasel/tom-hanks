@@ -41,3 +41,12 @@
 .card{
   text-align: center;
 }
+.movie{
+  text-align: center;
+}
+.movie img{
+  width: 400px;
+}
+.movie .card-title{
+  font-size: 4.5em;
+}

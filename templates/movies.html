@@ -17,11 +17,11 @@
     <div class="row justify-content-center">
       {% for row in data %}
         <div class="card m-3" style="width: 18rem;">
-          <a href="#"><img src="{{ row[2] }}" class="card-img-top" alt="..."></a>
+          <a href="#"><img src="{{ row[2] }}" class="card-img-top" alt="{{ row[2] }}"></a>
           <div class="card-body">
             <h5 class="card-title">{{ row[1] }}</h5>
             <p class="card-text">year: {{ row[3] }}  - Rate: {{ row[5] }}/10</p>
-            <a href="#" class="btn stretched-link">See more</a>
+            <a href="{{ url_for('movie', name=row[1]) }}" class="btn stretched-link">See more</a>
           </div>
         </div>
       {% endfor %}

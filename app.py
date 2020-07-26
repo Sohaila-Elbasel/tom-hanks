@@ -37,5 +37,20 @@ def movies():
     finally:
         return render_template('movies.html', title= 'Movies', data = data)
 
+@app.route('/movie/<string:name>')
+def movie(name):
+    data = []
+    try:
+        (cursor, connection) = connect()
+        query = "SELECT * FROM movies WHERE name = %s;"
+        cursor.execute(query, (name,))
+        data = cursor.fetchone()
+        close_connection(cursor, connection)
+
+    except Exception as error:
+        print(error)
+    finally:
+        return render_template('movie.html', title= name, data = data)
+
 if __name__ == '__main__':
     app.run()
