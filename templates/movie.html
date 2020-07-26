@@ -12,7 +12,7 @@
 {% block content %}
 
   <div class="mt-2 pt-5 movies">
-    <h3 class="border-bottom movies-title">Movie <img src="https://cdn4.iconfinder.com/data/icons/vector-brand-logos/40/Instagram-512.png" width="40" alt=""></h3>
+    <h3 class="border-bottom movies-title">Movie <img src="https://cdn4.iconfinder.com/data/icons/vector-brand-logos/40/Instagram-512.png" width="40" alt=""> <span class="movie-path"><a href="{{ url_for('movies') }}">Movies/</a>{{ data[1] }}</span></h3>
 
     <div class="row justify-content-center movie">
       {% if data %}

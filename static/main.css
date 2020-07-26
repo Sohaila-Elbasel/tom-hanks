@@ -50,3 +50,12 @@
 .movie .card-title{
   font-size: 4.5em;
 }
+.movie-path, .movie-path a{
+  font-size: 15px;
+  color: gray;
+}
+.movie-path a:hover,
+.movie-path a:active{
+  text-decoration: none;
+  color: black;
+}
